@@ -24,17 +24,13 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
-    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'io.projectreactor:reactor-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb' // MongoDB 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-web' // Web 의존성
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0' // API 문서화
+    compileOnly 'org.projectlombok:lombok' // Lombok
+    developmentOnly 'org.springframework.boot:spring-boot-devtools' // 개발 도구
+    annotationProcessor 'org.projectlombok:lombok' // Lombok
+    testImplementation 'org.springframework.boot:spring-boot-starter-test' // 테스트
 }
 
 tasks.named('test') {
